@@ -1,0 +1,33 @@
+﻿@model CandidateDetailsWebApp.Models.Candidate
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add Candidate</title>
+</head>
+<body>
+    <h1>Add New Candidate</h1>
+
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(Model => Model.CandidateId)
+        @Html.TextBoxFor(Model => Model.CandidateId)<br />
+
+        @Html.LabelFor(Model => Model.Name)
+        @Html.TextBoxFor(Model => Model.Name)<br />
+
+        @Html.LabelFor(Model => Model.Address)
+        @Html.TextBoxFor(Model => Model.Address)<br />
+
+        @Html.LabelFor(Model => Model.Phone)
+        @Html.TextBoxFor(Model => Model.Phone)<br />
+
+        @Html.LabelFor(Model => Model.Qualification)
+        @Html.TextBoxFor(Model => Model.Qualification)<br />
+
+        <input type="Submit" name="submit" />
+    }
+</body>
+</html>
+

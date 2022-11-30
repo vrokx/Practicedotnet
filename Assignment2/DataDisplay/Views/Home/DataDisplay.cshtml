@@ -1,0 +1,42 @@
+﻿@model IEnumerable<DataDisplay.Models.BusInfo>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Bus ID</th>
+                    <th>Boarding Point</th>
+                    <th>Travel Date</th>
+                    <th>Amount</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.BusID</td>
+                        <td>@item.BoardingPoint</td>
+                        <td>@item.TravelDate</td>
+                        <td>@item.Amount</td>
+                        <td>@item.Rating</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        
+    </div>
+</body>
+</html>
